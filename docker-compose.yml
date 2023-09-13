@@ -6,7 +6,7 @@ services:
       context: .
       args:
         - DEV=true
-    ports: 
+    ports:
       - "8000:8000"
     volumes:
       - ./app:/app
@@ -17,8 +17,8 @@ services:
     environment:
       - DB_HOST=db
       - DB_NAME=devdb
-      - DB-USER=devuser
-      - DB_PASS= changeme
+      - DB_USER=devuser
+      - DB_PASS=changeme
     depends_on:
       - db
 
@@ -30,7 +30,6 @@ services:
       - POSTGRES_DB=devdb
       - POSTGRES_USER=devuser
       - POSTGRES_PASSWORD=changeme
-
 
 volumes:
   dev-db-data:
